@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: luffy-db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - luffy-network
+
+  api:
+    image: luffy-api
+    container_name: luffy-api
+    restart: on-failure
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    networks:
+      - luffy-network
+
+volumes:
+  postgres_data:
+
+networks:
+  luffy-network:
+    driver: bridge

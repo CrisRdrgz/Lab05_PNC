@@ -1,0 +1,74 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: luffy
+meta:
+  id: wrk_b737bccfc018444c921810bf4c9c5077
+  created: 1782675813325
+  modified: 1782675813325
+  description: ""
+collection:
+  - url: " http://localhost:8080/api/pirates"
+    name: New Request
+    meta:
+      id: req_9ed2382ab0184492b848cbb6039ba79b
+      created: 1782675818354
+      modified: 1782675854882
+      isPrivate: false
+      description: ""
+      sortKey: -1782675818354
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Monkey D. Luffy",
+          "bounty": 3000000000,
+          "crew": "Sombrero de Paja",
+          "isAlive": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pirates
+    name: New Request
+    meta:
+      id: req_e4df31ed2b0346adabc48d419587a3ac
+      created: 1782675865494
+      modified: 1782675869565
+      isPrivate: false
+      description: ""
+      sortKey: -1782675865494
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1be043931c08a57f899b786eb1b32292a6c3200a
+    created: 1782675813332
+    modified: 1782675813332
+environments:
+  name: Base Environment
+  meta:
+    id: env_1be043931c08a57f899b786eb1b32292a6c3200a
+    created: 1782675813327
+    modified: 1782675813327
+    isPrivate: false
