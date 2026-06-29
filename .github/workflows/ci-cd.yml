@@ -10,6 +10,10 @@ jobs:
   build-test-push:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./luffy
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
